@@ -1,0 +1,65 @@
+//Import scss files
+@use "./colors.scss" as colors;
+@use "./nav.scss";
+@use "./registration.scss";
+@use "./schedule.scss";
+@use "./sponsors.scss";
+
+// Adding fonts
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: colors.$mainColor;
+	font-family: "Teko", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: weight;
+	font-style: normal;
+	margin: 2rem 10rem;
+	.header-main-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+		main {
+			border: 30px solid #00bcf2;
+			background-color: #eeeeee;
+			padding: 2rem;
+			.section-welcome {
+				display: grid;
+				grid-template-rows: 1fr 2fr 1fr 0.1fr;
+				justify-items: center;
+				align-items: center;
+
+				h1 {
+					font-size: 3rem;
+					flex-grow: 2;
+					&.index-title {
+						margin: 0;
+					}
+				}
+				.img-index {
+					width: 30%;
+					margin: 2rem 1rem 0 0;
+				}
+				p {
+					font-size: 1.5rem;
+					text-align: center;
+				}
+				.btn-register {
+					align-self: flex-start;
+					text-decoration: none;
+					background-color: colors.$mainColor;
+					color: colors.$color4;
+					font-size: 1.5rem;
+					padding: 0.5rem 1rem;
+					border: none;
+					border-radius: 5px;
+				}
+			}
+		}
+	}
+}

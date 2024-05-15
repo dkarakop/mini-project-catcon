@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CatCon</title>
+		<!-- Add favicon -->
+		<link rel="icon" href="images/favicon.png" />
+		<!-- Insert CSS -->
+		<link rel="stylesheet" href="style/style.css" />
+	</head>
+	<body>
+		<!-- A total container for header+main -->
+		<div class="header-main-container">
+			<header>
+				<div class="header-container">
+					<!-- Add logo-Home 'Button' -->
+					<a href="index.html" class="header-logo">
+						<img
+							src="images/logo.png"
+							alt="Logo of Cat Con featuring a yellow cat paw in front of a blue global sphere"
+						/>
+					</a>
+					<nav>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="registration.html">Registration</a>
+							</li>
+							<li>
+								<a href="schedule.html">Schedule</a>
+							</li>
+							<li>
+								<a href="sponsors.html">Sponsors</a>
+							</li>
+							<li>
+								<a href="previousCon.html">Previous CaTCons</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<main>
+				<h1>🐱‍🏍CatCon 2024</h1>
+				<div class="registration-container">
+					<img
+						class="registration-img"
+						src="images/wrestler-kitty.png"
+						alt="An orange cat wrestler, donning a vibrant blue mask with adorable yellow embellishments on its cheeks,"
+					/>
+
+					<div class="form-container">
+						<h2 class="h2-registration">Registration Form</h2>
+						<form>
+							<label for="CatName" class="form-titles"
+								>Cat Name</label
+							>
+							<br />
+							<input
+								type="text"
+								id="CatName"
+								name="CatName"
+								required
+							/>
+							<p class="form-titles">Catvatar</p>
+							<div>
+								<input
+									type="radio"
+									name="Catvatar"
+									id="NinjaCat"
+									value="NinjaCat"
+								/>
+								<label for="NinjaCat">🐱‍👤 Ninja Cat</label>
+							</div>
+							<div>
+								<input
+									type="radio"
+									name="Catvatar"
+									id="DinoCat"
+									value="DinoCat"
+								/>
+								<label for="DinoCat">🐱‍🐉 Dino Cat</label>
+							</div>
+							<div>
+								<input
+									type="radio"
+									name="Catvatar"
+									id="HackerCat"
+									value="HackerCat"
+								/>
+								<label for="HackerCat">🐱‍💻 Hacker Cat</label>
+							</div>
+							<div>
+								<input
+									type="radio"
+									name="Catvatar"
+									id="HungryCat"
+									value="HungryCat"
+								/>
+								<label for="HungryCat">🐱‍👓 Hungry Cat</label>
+							</div>
+							<div>
+								<input
+									type="radio"
+									name="Catvatar"
+									id="AstroCat"
+									value="AstroCat"
+								/>
+								<label for="AstroCat">🐱‍🚀 Astro Cat</label>
+							</div>
+							<br />
+							<input
+								id="btn"
+								type="button"
+								value="Register"
+								onclick="playMusic()"
+							/>
+						</form>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>

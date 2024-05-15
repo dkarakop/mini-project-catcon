@@ -1,0 +1,46 @@
+@use "./colors.scss" as colors;
+
+main {
+	.sponsors-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 0.2fr 1fr 0.7fr 0.7fr 0.5fr;
+		place-items: center;
+		.sponsors-header {
+			grid-column: 1/-1;
+			place-self: center;
+		}
+		.sponsors-img {
+			grid-column: 1/-1;
+			width: 30%;
+			margin: 2rem 0;
+		}
+		.sponsors {
+			align-self: start;
+			justify-self: center;
+			padding: 0 1rem;
+			> h2 {
+				text-align: center;
+			}
+			> ul {
+				padding: 0;
+				list-style-type: none;
+			}
+			> ul > .company {
+				font-size: 1.5rem;
+			}
+		}
+		#btn-register {
+			grid-column: 1/-1;
+			justify-self: center;
+			align-self: center;
+			text-decoration: none;
+			background-color: colors.$mainColor;
+			color: colors.$color4;
+			font-size: 1.5rem;
+			padding: 0.5rem 1rem;
+			border: none;
+			border-radius: 5px;
+		}
+	}
+}

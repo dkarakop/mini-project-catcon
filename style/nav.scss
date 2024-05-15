@@ -1,0 +1,38 @@
+@use "./colors.scss" as colors;
+
+header {
+	.header-container {
+		display: flex;
+		height: 92px;
+		place-items: center;
+		gap: 1rem;
+		justify-content: space-between;
+		width: 100%;
+		.header-logo > img {
+			height: 70px;
+			// flex-grow: 2;
+		}
+		nav {
+			// flex-grow: 3;
+			ul {
+				display: flex;
+				justify-content: flex-end;
+				gap: 2rem;
+				list-style-type: none;
+				padding: 0;
+				li {
+					display: inline;
+					a {
+						text-decoration: none;
+						color: colors.$color4;
+						text-transform: uppercase;
+						font-size: 1.5rem;
+						&:hover {
+							color: colors.$color5;
+						}
+					}
+				}
+			}
+		}
+	}
+}
