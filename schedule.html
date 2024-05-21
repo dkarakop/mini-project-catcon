@@ -22,8 +22,27 @@
 						/>
 					</a>
 					<nav>
-						<ul>
-							<li><a href="index.html">Home</a></li>
+						<!-- Adding burger-navigation dropdown menu for small screens 768px -->
+						<!-- Hidden for screens >768px -->
+						<div class="burger-nav-dropdown">
+							<img
+								class="burger-dropbtn"
+								src="images/burger-menu-icon.png"
+								alt="Orange button for dropdown navigation menu."
+							/>
+							<div class="burger-dropdown-content">
+								<a href="index.html">Home</a>
+								<a href="registration.html">Registration</a>
+								<a href="schedule.html">Schedule</a>
+								<a href="sponsors.html">Sponsors</a>
+								<a href="previousCon.html">Previous CaTCons</a>
+							</div>
+						</div>
+						<!-- Navigation menu for screens >768px -->
+						<ul class="navigation-menu">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
 							<li>
 								<a href="registration.html">Registration</a>
 							</li>
@@ -43,6 +62,7 @@
 			<main>
 				<h1 class="schedule-h1">🐱‍🏍CatCon Schedule</h1>
 				<img
+					class="schedule-img"
 					src="./images/awareness.png"
 					alt="Illustration of a green and white megaphone broadcasting a message represented by a paw print symbol."
 				/>
@@ -96,7 +116,7 @@
 						alt="Illustration of a grey cat emerging from a brown paper box, ready to be part of CatCon."
 					/>
 					<a class="btn-register" href="registration.html">
-						Register</a
+						Register Now</a
 					>
 				</div>
 			</main>

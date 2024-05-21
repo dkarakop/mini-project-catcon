@@ -1,0 +1,89 @@
+@use "./colors.scss" as colors;
+
+main {
+	.previousCatCont-container {
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+		align-items: center;
+		gap: 2rem;
+		width: 100%;
+		.previousCon-star-img {
+			width: 20%;
+		}
+		.previousCatCon-moments-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: repeat(2fr, 7);
+			justify-content: center;
+			align-content: center;
+			justify-items: center;
+			align-items: center;
+			row-gap: 1rem;
+			border: 2px solid colors.$color2;
+
+			.previousCatCont-h3 {
+				background-color: colors.$color2;
+				font-size: 1.2rem;
+				width: 100%;
+				text-align: center;
+				padding: 1rem 0;
+			}
+			iframe {
+				width: 100%;
+			}
+
+			#first-h3,
+			#second-h3,
+			#third-h3,
+			#gif-7 {
+				grid-column: 1/-1;
+			}
+			#gif-7 {
+				padding-bottom: 1rem;
+			}
+		}
+	}
+	.previousCon-message {
+		.previousCon-message-p1 {
+			font-size: 2rem;
+			text-align: center;
+		}
+		.previousCon-message-p2 {
+			font-size: 1.5rem;
+			text-align: center;
+		}
+	}
+	.previousCon-writting-img {
+		width: 15%;
+	}
+	#btn-register {
+		align-self: center;
+		text-decoration: none;
+		background-color: colors.$mainColor;
+		color: colors.$color4;
+		font-size: 1.5rem;
+		padding: 0.5rem 1rem;
+		border: none;
+		border-radius: 5px;
+	}
+}
+
+@media (max-width: 768px) {
+	main {
+		.previousCatCont-container {
+			gap: 1rem;
+
+			.previousCon-star-img {
+				width: 40%;
+			}
+		}
+		.previousCatCon-moments-container {
+			row-gap: 0;
+		}
+
+		.previousCon-writting-img {
+			width: 30%;
+		}
+	}
+}

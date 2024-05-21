@@ -44,3 +44,23 @@ main {
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	body {
+		main {
+			gap: 0;
+			.sponsors-container {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				align-items: center;
+				.sponsors-img {
+					width: 50%;
+				}
+				.sponsors {
+					align-self: center;
+				}
+			}
+		}
+	}
+}

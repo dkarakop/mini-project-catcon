@@ -22,11 +22,26 @@
 						/>
 					</a>
 					<nav>
-						<ul>
+						<!-- Adding burger-navigation dropdown menu for small screens 768px -->
+						<!-- Hidden for screens >768px -->
+						<div class="burger-nav-dropdown">
+							<img
+								class="burger-dropbtn"
+								src="images/burger-menu-icon.png"
+								alt="Orange button for dropdown navigation menu."
+							/>
+							<div class="burger-dropdown-content">
+								<a href="index.html">Home</a>
+								<a href="registration.html">Registration</a>
+								<a href="schedule.html">Schedule</a>
+								<a href="sponsors.html">Sponsors</a>
+								<a href="previousCon.html">Previous CaTCons</a>
+							</div>
+						</div>
+						<!-- Navigation menu for screens >768px -->
+						<ul class="navigation-menu">
 							<li>
-								<a href="index.html" onclick="playMusic()"
-									>Home</a
-								>
+								<a href="index.html">Home</a>
 							</li>
 							<li>
 								<a href="registration.html">Registration</a>
@@ -127,12 +142,16 @@
 							title="At the end of an epic party, cats are seen wearily resting, their faces adorned with funny party hats, a testament to the night's festivities and the joy of wearing silly headwear."
 						></iframe>
 					</div>
-					<p class="previousCon-message-p">
-						Hey kittens! <br />Unleash your creativity and write
-						your own story as part of this year's Comic-Con!<br />
-						Grab your pencils and let your imaginations run wild.
-						Your unique tale deserves to be told!
-					</p>
+					<div class="previousCon-message">
+						<p class="previousCon-message-p1">Hey kittens!</p>
+						<p class="previousCon-message-p2">
+							Unleash your creativity and write your own story as
+							part of this year's Comic-Con!<br />
+							Grab your pencils and let your imaginations run
+							wild.<br />
+							Your unique tale deserves to be told!
+						</p>
+					</div>
 					<img
 						class="previousCon-writting-img"
 						src="images/writting-kitty.png"

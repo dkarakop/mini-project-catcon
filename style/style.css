@@ -10,26 +10,66 @@ header .header-container {
 header .header-container .header-logo > img {
   height: 70px;
 }
-header .header-container nav ul {
+header .header-container nav .burger-nav-dropdown {
+  display: none;
+}
+header .header-container nav .navigation-menu {
   display: flex;
   justify-content: flex-end;
   gap: 2rem;
   list-style-type: none;
   padding: 0;
 }
-header .header-container nav ul li {
+header .header-container nav .navigation-menu li {
   display: inline;
 }
-header .header-container nav ul li a {
+header .header-container nav .navigation-menu li a {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5rem;
 }
-header .header-container nav ul li a:hover {
+header .header-container nav .navigation-menu li a:hover {
   color: #ffee00;
 }
 
+@media (max-width: 768px) {
+  header .header-container {
+    justify-content: flex-start;
+  }
+  header .header-container nav .navigation-menu {
+    display: none;
+  }
+  header .header-container nav .burger-nav-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  header .header-container nav .burger-nav-dropdown .burger-dropbtn {
+    cursor: pointer;
+    width: 40%;
+  }
+  header .header-container nav .burger-nav-dropdown .burger-dropdown-content {
+    display: none;
+    font-size: 1.5rem;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  header .header-container nav .burger-nav-dropdown .burger-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  header .header-container nav .burger-nav-dropdown .burger-dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  header .header-container nav .burger-nav-dropdown:hover .burger-dropdown-content {
+    display: block;
+  }
+}
 main h1 {
   font-size: 3rem;
   text-align: center;
@@ -44,13 +84,16 @@ main .registration-container {
 main .registration-container .registration-img {
   align-self: center;
   justify-self: center;
+  width: 40%;
+  flex-grow: 1;
+  padding: 1.5rem;
 }
 main .form-container {
   display: flex;
   flex-direction: column;
   background-color: lightgray;
   padding: 2rem;
-  flex-grow: 2;
+  flex-grow: 3;
 }
 main .form-container .h2-registration {
   font-size: 2rem;
@@ -92,14 +135,31 @@ main .form-container form #btn {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  body main {
+    gap: 0;
+  }
+  body main .registration-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  body main .registration-container .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .registration-container .form-container .h2-registration {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
 }
-main img {
-  width: 30%;
+main .schedule-img {
+  width: 20%;
 }
 main .schedule-h1 {
   font-size: 3rem;
@@ -156,9 +216,19 @@ main .schedule-register .btn-register {
 main .schedule-register img {
   justify-self: center;
   align-self: center;
-  width: 30%;
+  width: 20%;
+  padding: 1rem;
 }
 
+@media (max-width: 768px) {
+  main .schedule-img {
+    width: 30%;
+    padding: 1.5rem 0;
+  }
+  main .schedule-register {
+    margin-top: 2rem;
+  }
+}
 main .sponsors-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -202,6 +272,100 @@ main .sponsors-container #btn-register {
   border-radius: 5px;
 }
 
+@media (max-width: 768px) {
+  body main {
+    gap: 0;
+  }
+  body main .sponsors-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  body main .sponsors-container .sponsors-img {
+    width: 50%;
+  }
+  body main .sponsors-container .sponsors {
+    align-self: center;
+  }
+}
+main .previousCatCont-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+main .previousCatCont-container .previousCon-star-img {
+  width: 20%;
+}
+main .previousCatCont-container .previousCatCon-moments-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(2fr, 7);
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  row-gap: 1rem;
+  border: 2px solid lightgray;
+}
+main .previousCatCont-container .previousCatCon-moments-container .previousCatCont-h3 {
+  background-color: lightgray;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+main .previousCatCont-container .previousCatCon-moments-container iframe {
+  width: 100%;
+}
+main .previousCatCont-container .previousCatCon-moments-container #first-h3,
+main .previousCatCont-container .previousCatCon-moments-container #second-h3,
+main .previousCatCont-container .previousCatCon-moments-container #third-h3,
+main .previousCatCont-container .previousCatCon-moments-container #gif-7 {
+  grid-column: 1/-1;
+}
+main .previousCatCont-container .previousCatCon-moments-container #gif-7 {
+  padding-bottom: 1rem;
+}
+main .previousCon-message .previousCon-message-p1 {
+  font-size: 2rem;
+  text-align: center;
+}
+main .previousCon-message .previousCon-message-p2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+main .previousCon-writting-img {
+  width: 15%;
+}
+main #btn-register {
+  align-self: center;
+  text-decoration: none;
+  background-color: #1c84a1;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  main .previousCatCont-container {
+    gap: 1rem;
+  }
+  main .previousCatCont-container .previousCon-star-img {
+    width: 40%;
+  }
+  main .previousCatCon-moments-container {
+    row-gap: 0;
+  }
+  main .previousCon-writting-img {
+    width: 30%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -256,4 +420,20 @@ body .header-main-container main .section-welcome .btn-register {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 1rem 1.5rem;
+  }
+  body .header-main-container {
+    width: 100%;
+  }
+  body .header-main-container main .section-welcome .img-index {
+    width: 40%;
+    margin: 0;
+  }
+  body .header-main-container main .section-welcome .btn-register {
+    margin-top: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
