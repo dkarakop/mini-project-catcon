@@ -175,6 +175,7 @@ main .schedule-h1 {
 main .table-container table {
   width: 100%;
   font-size: 1.5rem;
+  border-collapse: collapse;
 }
 main .table-container thead {
   background-color: lightgray;
@@ -411,7 +412,7 @@ body .header-main-container main .section-welcome h1.index-title {
   margin: 0;
 }
 body .header-main-container main .section-welcome h1 .title-img {
-  height: 3.5rem;
+  height: 3rem;
 }
 body .header-main-container main .section-welcome .img-index {
   width: 30%;

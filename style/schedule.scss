@@ -16,6 +16,8 @@ main {
 		table {
 			width: 100%;
 			font-size: 1.5rem;
+			//how to delete border
+			border-collapse: collapse;
 		}
 		thead {
 			background-color: colors.$color2;
