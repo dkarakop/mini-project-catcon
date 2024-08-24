@@ -4,11 +4,9 @@ header .burger-nav-dropdown {
 }
 header .header-container {
   display: flex;
-  height: 92px;
-  place-items: center;
-  gap: 1rem;
-  justify-content: space-between;
   width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 header .header-container .header-logo {
   outline: none; /* Removes the default focus outline */
@@ -25,7 +23,6 @@ header .header-container .header-logo:focus {
 header .header-container nav .navigation-menu {
   display: flex;
   justify-content: flex-end;
-  gap: 2rem;
   list-style-type: none;
   padding: 0;
 }
@@ -94,9 +91,8 @@ header .header-container nav .navigation-menu li a:focus {
     display: none;
   }
 }
-main h1 {
-  font-size: 3rem;
-  text-align: center;
+main h1 > img {
+  width: 15%;
 }
 main .registration-container {
   display: flex;
@@ -144,6 +140,9 @@ main .form-container form #CatName:focus {
   border-color: #1c84a1;
   outline-style: none;
 }
+main .form-container form #catvatar {
+  font-weight: bold;
+}
 main .form-container form #btn {
   background-color: #1c84a1;
   color: #fff;
@@ -181,6 +180,12 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+}
+main h1 {
+  font-size: 4rem;
+}
+main h1 > img {
+  width: 15%;
 }
 main .schedule-img {
   width: 20%;
@@ -254,6 +259,9 @@ main .schedule-register img {
     margin-top: 2rem;
   }
 }
+main h1 > img {
+  width: 15%;
+}
 main .sponsors-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -313,6 +321,9 @@ main .sponsors-container #btn-register {
   body main .sponsors-container .sponsors {
     align-self: center;
   }
+}
+main h1 > img {
+  width: 15%;
 }
 main .previousCatCont-container {
   display: flex;
@@ -404,14 +415,6 @@ body {
   font-style: normal;
   margin: 2rem 10rem;
 }
-body button {
-  outline: none;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-body button:focus {
-  border: 3px dashed #ffee00;
-}
 body .header-main-container {
   display: flex;
   flex-direction: column;
@@ -423,28 +426,33 @@ body .header-main-container main {
   background-color: #eeeeee;
   padding: 2rem;
 }
+body .header-main-container main .main-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .header-main-container main .main-title-container h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+body .header-main-container main .main-title-container .main-title-img {
+  width: 20%;
+}
+body .header-main-container main .main-title-container .main-title-img img {
+  width: 100%;
+}
 body .header-main-container main .section-welcome {
   display: grid;
   grid-template-rows: 1fr 2fr 1fr 0.1fr;
   justify-items: center;
   align-items: center;
 }
-body .header-main-container main .section-welcome h1 {
-  font-size: 3rem;
-  flex-grow: 2;
-}
-body .header-main-container main .section-welcome h1.index-title {
-  margin: 0;
-}
-body .header-main-container main .section-welcome h1 .title-img {
-  height: 3rem;
-}
 body .header-main-container main .section-welcome .img-index {
   width: 30%;
   margin: 2rem 1rem 0 0;
 }
 body .header-main-container main .section-welcome p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
 }
 body .header-main-container main .section-welcome .btn-register {
@@ -452,14 +460,21 @@ body .header-main-container main .section-welcome .btn-register {
   text-decoration: none;
   background-color: #1c84a1;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 0.5rem 1rem;
-  outline: none;
   border-radius: 5px;
+}
+body .header-main-container main .section-welcome .btn-register:focus {
+  outline: none;
+}
+body .header-main-container main .section-welcome .btn-register .btn-innerText {
+  display: inline-block;
+  padding: 1px 10px;
+  outline: none;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
-body .header-main-container main .section-welcome .btn-register:focus {
+body .header-main-container main .section-welcome .btn-register:focus .btn-innerText {
   border: 3px dashed #ffee00;
 }
 

@@ -6,11 +6,9 @@ header {
 	}
 	.header-container {
 		display: flex;
-		height: 92px;
-		place-items: center;
-		gap: 1rem;
-		justify-content: space-between;
 		width: 100%;
+		justify-content: space-between;
+		align-items: center;
 		.header-logo {
 			outline: none; /* Removes the default focus outline */
 			border: 2px solid transparent; /* Initial transparent border */
@@ -27,7 +25,6 @@ header {
 			.navigation-menu {
 				display: flex;
 				justify-content: flex-end;
-				gap: 2rem;
 				list-style-type: none;
 				padding: 0;
 				li {

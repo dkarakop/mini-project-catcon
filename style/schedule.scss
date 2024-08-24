@@ -5,6 +5,12 @@ main {
 	flex-direction: column;
 	align-items: center;
 	gap: 3rem;
+	h1 {
+		font-size: 4rem;
+	}
+	h1 > img {
+		width: 15%;
+	}
 	.schedule-img {
 		width: 20%;
 	}

@@ -1,6 +1,9 @@
 @use "./colors.scss" as colors;
 
 main {
+	h1 > img {
+		width: 15%;
+	}
 	.previousCatCont-container {
 		display: flex;
 		flex-direction: column;

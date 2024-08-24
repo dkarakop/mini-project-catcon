@@ -1,9 +1,8 @@
 @use "./colors.scss" as colors;
 
 main {
-	h1 {
-		font-size: 3rem;
-		text-align: center;
+	h1 > img {
+		width: 15%;
 	}
 	.registration-container {
 		display: flex;
@@ -51,6 +50,9 @@ main {
 			#CatName:focus {
 				border-color: colors.$mainColor;
 				outline-style: none;
+			}
+			#catvatar {
+				font-weight: bold;
 			}
 			#btn {
 				background-color: colors.$mainColor;

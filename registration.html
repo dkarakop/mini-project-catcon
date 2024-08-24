@@ -60,14 +60,15 @@
 				</div>
 			</header>
 			<main>
-				<h1>
-					<img
-						class="title-img"
-						src="images/hero-kitty.png"
-						alt="Orange cat in a Superman posture wearing a pink cape"
-						style="height: 3rem"
-					/>CatCon 2024
-				</h1>
+				<div class="main-title-container">
+					<div class="main-title-img">
+						<img
+							src="images/hero-kitty.png"
+							alt="Orange cat in a Superman posture wearing a pink cape"
+						/>
+					</div>
+					<h1>CatCon 2024</h1>
+				</div>
 				<div class="registration-container">
 					<img
 						class="registration-img"
@@ -88,7 +89,9 @@
 								name="CatName"
 								required
 							/>
-							<p class="form-titles">Catvatar</p>
+							<p class="form-titles">
+								Choose your <span id="catvatar">Catvatar</span>
+							</p>
 							<div>
 								<input
 									type="radio"

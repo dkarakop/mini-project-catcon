@@ -1,6 +1,9 @@
 @use "./colors.scss" as colors;
 
 main {
+	h1 > img {
+		width: 15%;
+	}
 	.sponsors-container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);

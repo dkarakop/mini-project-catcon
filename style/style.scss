@@ -20,15 +20,6 @@ body {
 	font-weight: weight;
 	font-style: normal;
 	margin: 2rem 10rem;
-	button {
-		outline: none;
-		border: 2px solid transparent;
-		transition: border-color 0.3s ease;
-	}
-	button:focus {
-		border: 3px dashed colors.$color5;
-	}
-
 	.header-main-container {
 		display: flex;
 		flex-direction: column;
@@ -38,43 +29,56 @@ body {
 			border: 30px solid colors.$color1;
 			background-color: colors.$color3;
 			padding: 2rem;
+			.main-title-container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				h1 {
+					font-size: 4rem;
+					text-align: center;
+				}
+				.main-title-img {
+					width: 20%;
+					img {
+						width: 100%;
+					}
+				}
+			}
 			.section-welcome {
 				display: grid;
 				grid-template-rows: 1fr 2fr 1fr 0.1fr;
 				justify-items: center;
 				align-items: center;
 
-				h1 {
-					font-size: 3rem;
-					flex-grow: 2;
-					&.index-title {
-						margin: 0;
-					}
-					.title-img {
-						height: 3rem;
-					}
-				}
 				.img-index {
 					width: 30%;
 					margin: 2rem 1rem 0 0;
 				}
 				p {
-					font-size: 1.5rem;
+					font-size: 2rem;
 					text-align: center;
 				}
+
 				.btn-register {
 					align-self: flex-start;
 					text-decoration: none;
 					background-color: colors.$mainColor;
 					color: colors.$color4;
-					font-size: 1.5rem;
+					font-size: 2rem;
 					padding: 0.5rem 1rem;
-					outline: none;
 					border-radius: 5px;
-					border: 2px solid transparent;
-					transition: border-color 0.3s ease;
+					&:focus {
+						outline: none;
+					}
+					.btn-innerText {
+						display: inline-block;
+						padding: 1px 10px;
+						outline: none;
+						border: 2px solid transparent;
+						transition: border-color 0.3s ease;
+					}
 				}
-				.btn-register:focus {
+				.btn-register:focus .btn-innerText {
 					border: 3px dashed colors.$color5;
 				}
 			}
