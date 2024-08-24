@@ -10,8 +10,17 @@ header .header-container {
   justify-content: space-between;
   width: 100%;
 }
+header .header-container .header-logo {
+  outline: none; /* Removes the default focus outline */
+  border: 2px solid transparent; /* Initial transparent border */
+  transition: border-color 0.3s ease; /* Smooth transition */
+}
 header .header-container .header-logo > img {
-  height: 70px;
+  height: 80px;
+  padding: 2px;
+}
+header .header-container .header-logo:focus {
+  border: 3px dashed #ffee00;
 }
 header .header-container nav .navigation-menu {
   display: flex;
@@ -27,10 +36,18 @@ header .header-container nav .navigation-menu li a {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 4px 10px;
+  outline: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
 header .header-container nav .navigation-menu li a:hover {
   color: #ffee00;
+}
+header .header-container nav .navigation-menu li a:focus {
+  border: 3px dashed #ffee00;
 }
 
 @media (max-width: 768px) {
@@ -387,6 +404,14 @@ body {
   font-style: normal;
   margin: 2rem 10rem;
 }
+body button {
+  outline: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+body button:focus {
+  border: 3px dashed #ffee00;
+}
 body .header-main-container {
   display: flex;
   flex-direction: column;
@@ -429,8 +454,13 @@ body .header-main-container main .section-welcome .btn-register {
   color: #fff;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
-  border: none;
+  outline: none;
   border-radius: 5px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+body .header-main-container main .section-welcome .btn-register:focus {
+  border: 3px dashed #ffee00;
 }
 
 @media (max-width: 768px) {

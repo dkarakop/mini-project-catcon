@@ -11,8 +11,17 @@ header {
 		gap: 1rem;
 		justify-content: space-between;
 		width: 100%;
+		.header-logo {
+			outline: none; /* Removes the default focus outline */
+			border: 2px solid transparent; /* Initial transparent border */
+			transition: border-color 0.3s ease; /* Smooth transition */
+		}
 		.header-logo > img {
-			height: 70px;
+			height: 80px;
+			padding: 2px;
+		}
+		.header-logo:focus {
+			border: 3px dashed colors.$color5;
 		}
 		nav {
 			.navigation-menu {
@@ -27,10 +36,20 @@ header {
 						text-decoration: none;
 						color: colors.$color4;
 						text-transform: uppercase;
-						font-size: 1.5rem;
+						font-size: 2rem;
+						display: inline-block;
+						padding: 4px 10px;
+
+						outline: none;
+						border: 2px solid transparent;
+						transition: border-color 0.3s ease;
+
 						&:hover {
 							color: colors.$color5;
 						}
+					}
+					a:focus {
+						border: 3px dashed colors.$color5;
 					}
 				}
 			}

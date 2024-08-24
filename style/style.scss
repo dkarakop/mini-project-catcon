@@ -20,6 +20,15 @@ body {
 	font-weight: weight;
 	font-style: normal;
 	margin: 2rem 10rem;
+	button {
+		outline: none;
+		border: 2px solid transparent;
+		transition: border-color 0.3s ease;
+	}
+	button:focus {
+		border: 3px dashed colors.$color5;
+	}
+
 	.header-main-container {
 		display: flex;
 		flex-direction: column;
@@ -60,8 +69,13 @@ body {
 					color: colors.$color4;
 					font-size: 1.5rem;
 					padding: 0.5rem 1rem;
-					border: none;
+					outline: none;
 					border-radius: 5px;
+					border: 2px solid transparent;
+					transition: border-color 0.3s ease;
+				}
+				.btn-register:focus {
+					border: 3px dashed colors.$color5;
 				}
 			}
 		}
