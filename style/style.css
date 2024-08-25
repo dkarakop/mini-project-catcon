@@ -53,6 +53,7 @@ header .header-container nav .navigation-menu li a:focus {
     display: flex;
     justify-items: center;
     align-items: center;
+    margin-top: 2rem;
   }
   header .burger-nav-dropdown {
     position: relative;
@@ -81,6 +82,9 @@ header .header-container nav .navigation-menu li a:focus {
   }
   header .burger-nav-dropdown .burger-dropdown-content a:hover {
     background-color: #f1f1f1;
+  }
+  header .burger-nav-dropdown .burger-dropdown-content a:focus {
+    background-color: #ffee00;
   }
   header .burger-nav-dropdown:hover .burger-dropdown-content {
     display: block;
@@ -499,12 +503,20 @@ body .header-main-container main .section-welcome .btn-register:focus .btn-inner
     margin: 2rem 4rem;
   }
 }
+@media (max-width: 600px) {
+  body .header-main-container main .main-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media (max-width: 768px) {
   body {
     margin: 1.5rem 0;
   }
   body .header-main-container {
     width: 100%;
+    height: 100vh;
   }
   body .header-main-container main {
     border: 8px solid #00bcf2;

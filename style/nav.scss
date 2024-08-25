@@ -61,6 +61,7 @@ header {
 		display: flex;
 		justify-items: center;
 		align-items: center;
+		margin-top: 2rem;
 		.burger-nav-dropdown {
 			position: relative;
 			display: inline-block;
@@ -87,6 +88,9 @@ header {
 			}
 			.burger-dropdown-content a:hover {
 				background-color: #f1f1f1;
+			}
+			.burger-dropdown-content a:focus {
+				background-color: colors.$color5;
 			}
 		}
 		.burger-nav-dropdown:hover .burger-dropdown-content {
