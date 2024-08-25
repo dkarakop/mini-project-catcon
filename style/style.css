@@ -123,6 +123,10 @@ main .form-container {
 main .form-container .h2-registration {
   font-size: 2rem;
 }
+main .form-container form {
+  display: flex;
+  flex-direction: column;
+}
 main .form-container form .form-titles {
   font-size: 2rem;
 }
@@ -140,13 +144,14 @@ main .form-container form .catvatar-option {
   display: flex;
   align-items: center;
   gap: 1rem;
-  justify-content: center;
+  justify-content: start;
+  margin-bottom: 1rem;
 }
-main .form-container form .catvatar-option > p {
+main .form-container form .catvatar-option > label {
   font-size: 1.7rem;
 }
 main .form-container form .catvatar-option > img {
-  width: 15%;
+  width: 20%;
 }
 main .form-container form #CatName {
   border: 1px solid lightgray;
@@ -155,24 +160,38 @@ main .form-container form #CatName {
 }
 main .form-container form #CatName:focus {
   border-color: #ffee00;
+  border: 3px dashed #ffee00;
   outline-style: none;
 }
 main .form-container form #catvatar {
   font-weight: bold;
 }
-main .form-container form #btn {
-  background-color: #0c3945;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.5rem;
+main .form-container form .btn-register {
   font-family: "Teko", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
-  width: 100%;
+  text-decoration: none;
+  background-color: #0c3945;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
   cursor: pointer;
+}
+main .form-container form .btn-register:focus {
+  outline: none;
+}
+main .form-container form .btn-register .btn-innerText {
+  display: inline-block;
+  padding: 1px 10px;
+  outline: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+main .form-container form .btn-register:focus .btn-innerText {
+  border: 3px dashed #ffee00;
 }
 
 @media (max-width: 768px) {
@@ -512,11 +531,10 @@ body .header-main-container main .section-welcome .btn-register:focus .btn-inner
 }
 @media (max-width: 768px) {
   body {
-    margin: 1.5rem 0;
+    margin: 0.2rem 0;
   }
   body .header-main-container {
     width: 100%;
-    height: 100vh;
   }
   body .header-main-container main {
     border: 8px solid #00bcf2;

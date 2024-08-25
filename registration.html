@@ -80,7 +80,6 @@
 							<label for="CatName" class="form-titles"
 								>Cat Name</label
 							>
-							<br />
 							<input
 								type="text"
 								id="CatName"
@@ -91,62 +90,75 @@
 								Choose your <span id="catvatar">Catvatar</span>
 							</p>
 							<div class="catvatar-option">
-								<label for="Astro-kitty"></label>
 								<input
 									type="radio"
 									name="Catvatar"
 									id="Astro-kitty"
 									value="Astro-kitty"
 								/>
-								<p>AstroCat</p>
 								<img
 									src="images/astro-kitty.png"
-									alt="A cat wearing an astronaut suit"
+									alt="An illustrated cat wearing an astronaut suit"
 								/>
+								<label for="Astro-kitty">AstroCat</label>
 							</div>
-							<div>
+							<div class="catvatar-option">
 								<input
 									type="radio"
 									name="Catvatar"
-									id="DinoCat"
-									value="DinoCat"
+									id="Bubble-kitty"
+									value="Bubble-kitty"
 								/>
-								<label for="DinoCat">🐱‍🐉 Dino Cat</label>
+								<img
+									src="images/bubble-kitty.png"
+									alt="An illustrated orange cat making bubbles with its mouth open"
+								/>
+								<label for="Bubble-kitty">BubbleCat</label>
 							</div>
-							<div>
+							<div class="catvatar-option">
 								<input
 									type="radio"
 									name="Catvatar"
-									id="HackerCat"
-									value="HackerCat"
+									id="devil-kitty"
+									value="devil-kitty"
 								/>
-								<label for="HackerCat">🐱‍💻 Hacker Cat</label>
+								<img
+									src="images/devil-kitty.png"
+									alt="An illustrated cat with devil horns, a tail, and holding a trident"
+								/>
+								<label for="devil-kitty">DevilCat</label>
 							</div>
-							<div>
+							<div class="catvatar-option">
 								<input
 									type="radio"
 									name="Catvatar"
-									id="HungryCat"
-									value="HungryCat"
+									id="mad-scientist-kitty"
+									value="mad-scientist-kitty"
 								/>
-								<label for="HungryCat">🐱‍👓 Hungry Cat</label>
+								<img
+									src="images/mad-science-kitty.png"
+									alt="An illustrated cat dressed as a mad scientist with tiny glasses, wild hair, and holding a glass chemical doser"
+								/>
+								<label for="mad-scientist-kitty"
+									>MadScientistCat</label
+								>
 							</div>
-							<div>
+							<div class="catvatar-option">
 								<input
 									type="radio"
 									name="Catvatar"
-									id="AstroCat"
-									value="AstroCat"
+									id="robot-kitty"
+									value="robot-kitty"
 								/>
-								<label for="AstroCat">🐱‍🚀 Astro Cat</label>
+								<img
+									src="images/robot-kitty.png"
+									alt="An illustrated cat-like robot with mechanical features and a futuristic design"
+								/>
+								<label for="robot-kitty">RobotCat</label>
 							</div>
-							<br />
-							<input
-								id="btn"
-								type="button"
-								value="Register"
-								onclick="playMusic()"
-							/>
+							<button class="btn-register" onclick="playMusic()">
+								<span class="btn-innerText">Register Now</span>
+							</button>
 						</form>
 					</div>
 				</div>
