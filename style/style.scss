@@ -88,6 +88,17 @@ body {
 		}
 	}
 }
+@media (max-width: 1100px) {
+	body {
+		margin: 2rem 6rem;
+	}
+}
+
+@media (max-width: 900px) {
+	body {
+		margin: 2rem 4rem;
+	}
+}
 
 @media (max-width: 768px) {
 	body {

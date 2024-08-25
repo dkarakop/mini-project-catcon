@@ -42,13 +42,25 @@ main {
 				width: 100%;
 				border-radius: 5px;
 			}
+			.catvatar-option {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				justify-content: center;
+			}
+			.catvatar-option > p {
+				font-size: 1.7rem;
+			}
+			.catvatar-option > img {
+				width: 15%;
+			}
 			#CatName {
 				border: 1px solid colors.$color2;
 				margin-bottom: 1rem;
 				padding-left: 0.5rem;
 			}
 			#CatName:focus {
-				border-color: colors.$mainColor;
+				border-color: colors.$color5;
 				outline-style: none;
 			}
 			#catvatar {
