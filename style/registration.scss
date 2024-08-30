@@ -130,8 +130,12 @@ main {
 			justify-content: center;
 			align-items: center;
 		}
-		.popup.active > img {
-			width: 60%;
+		.popup.active > div {
+			display: flex;
+			justify-content: center;
+		}
+		.popup.active > div > img {
+			width: 100%;
 		}
 		.popup.active > p {
 			font-size: 1.5rem;
@@ -207,7 +211,38 @@ main {
 						font-size: 2rem;
 						text-align: center;
 					}
+					form {
+						display: flex;
+						flex-direction: column;
+						width: 70vw;
+					}
 				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	main {
+		.form-container {
+			.popup.active {
+				width: 400px;
+			}
+			.popup.active > div > img {
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	main {
+		.form-container {
+			.popup.active {
+				width: 300px;
+			}
+			.popup.active > div > img {
+				width: 60%;
 			}
 		}
 	}

@@ -226,8 +226,12 @@ main .form-container .popup.active {
   justify-content: center;
   align-items: center;
 }
-main .form-container .popup.active > img {
-  width: 60%;
+main .form-container .popup.active > div {
+  display: flex;
+  justify-content: center;
+}
+main .form-container .popup.active > div > img {
+  width: 100%;
 }
 main .form-container .popup.active > p {
   font-size: 1.5rem;
@@ -295,6 +299,27 @@ main .form-container .popup .close-btn:focus span {
   body main .registration-container .form-container .h2-registration {
     font-size: 2rem;
     text-align: center;
+  }
+  body main .registration-container .form-container form {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+  }
+}
+@media (max-width: 600px) {
+  main .form-container .popup.active {
+    width: 400px;
+  }
+  main .form-container .popup.active > div > img {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  main .form-container .popup.active {
+    width: 300px;
+  }
+  main .form-container .popup.active > div > img {
+    width: 60%;
   }
 }
 main h1 {
