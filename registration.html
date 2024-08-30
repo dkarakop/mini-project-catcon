@@ -76,94 +76,142 @@
 
 					<div class="form-container">
 						<h2 class="h2-registration">Registration Form</h2>
-						<form>
+						<form class="registerForm">
 							<label for="CatName" class="form-titles"
 								>Cat Name</label
 							>
 							<input
 								type="text"
-								id="CatName"
+								id="catName"
 								name="CatName"
 								required
 							/>
 							<p class="form-titles">
-								Choose your <span id="catvatar">Catvatar</span>
+								Choose your
+								<span id="catvatar">Catvatar</span>
 							</p>
-							<div class="catvatar-option">
-								<input
-									type="radio"
-									name="Catvatar"
-									id="Astro-kitty"
-									value="Astro-kitty"
-								/>
-								<img
-									src="images/astro-kitty.png"
-									alt="An illustrated cat wearing an astronaut suit"
-								/>
-								<label for="Astro-kitty">AstroCat</label>
-							</div>
-							<div class="catvatar-option">
-								<input
-									type="radio"
-									name="Catvatar"
-									id="Bubble-kitty"
-									value="Bubble-kitty"
-								/>
-								<img
-									src="images/bubble-kitty.png"
-									alt="An illustrated orange cat making bubbles with its mouth open"
-								/>
-								<label for="Bubble-kitty">BubbleCat</label>
-							</div>
-							<div class="catvatar-option">
-								<input
-									type="radio"
-									name="Catvatar"
-									id="devil-kitty"
-									value="devil-kitty"
-								/>
-								<img
-									src="images/devil-kitty.png"
-									alt="An illustrated cat with devil horns, a tail, and holding a trident"
-								/>
-								<label for="devil-kitty">DevilCat</label>
-							</div>
-							<div class="catvatar-option">
-								<input
-									type="radio"
-									name="Catvatar"
-									id="mad-scientist-kitty"
-									value="mad-scientist-kitty"
-								/>
-								<img
-									src="images/mad-science-kitty.png"
-									alt="An illustrated cat dressed as a mad scientist with tiny glasses, wild hair, and holding a glass chemical doser"
-								/>
-								<label for="mad-scientist-kitty"
-									>MadScientistCat</label
+							<div class="radio-group">
+								<div
+									class="radio-item"
+									tabindex="0"
+									onclick="selectOption('astro-kitty')"
 								>
+									<input
+										type="radio"
+										name="Catvatar"
+										id="astro-kitty"
+										value="Astro-kitty"
+									/>
+									<img
+										src="images/astro-kitty.png"
+										alt="An illustrated cat wearing an astronaut suit"
+									/>
+									<label for="Astro-kitty">AstroCat</label>
+								</div>
+								<div
+									class="radio-item"
+									tabindex="0"
+									onclick="selectOption('bubble-kitty')"
+								>
+									<input
+										type="radio"
+										name="Catvatar"
+										id="bubble-kitty"
+										value="Bubble-kitty"
+									/>
+									<img
+										src="images/bubble-kitty.png"
+										alt="An illustrated orange cat making bubbles with its mouth open"
+									/>
+									<label for="Bubble-kitty">BubbleCat</label>
+								</div>
+								<div
+									class="radio-item"
+									tabindex="0"
+									onclick="selectOption('devil-kitty')"
+								>
+									<input
+										type="radio"
+										name="Catvatar"
+										id="devil-kitty"
+										value="devil-kitty"
+									/>
+									<img
+										src="images/devil-kitty.png"
+										alt="An illustrated cat with devil horns, a tail, and holding a trident"
+									/>
+									<label for="devil-kitty">DevilCat</label>
+								</div>
+								<div
+									class="radio-item"
+									tabindex="0"
+									onclick="selectOption('mad-scientist-kitty')"
+								>
+									<input
+										type="radio"
+										name="Catvatar"
+										id="mad-scientist-kitty"
+										value="mad-scientist-kitty"
+									/>
+									<img
+										src="images/mad-science-kitty.png"
+										alt="An illustrated cat dressed as a mad scientist with tiny glasses, wild hair, and holding a glass chemical doser"
+									/>
+									<label for="mad-scientist-kitty"
+										>MadScientistCat</label
+									>
+								</div>
+								<div
+									class="radio-item"
+									tabindex="0"
+									onclick="selectOption('robot-kitty')"
+								>
+									<input
+										type="radio"
+										name="Catvatar"
+										id="robot-kitty"
+										value="robot-kitty"
+									/>
+									<img
+										src="images/robot-kitty.png"
+										alt="An illustrated cat-like robot with mechanical features and a futuristic design"
+									/>
+									<label for="robot-kitty">RobotCat</label>
+								</div>
+								<button
+									class="btn-register"
+									onclick="playMusic()"
+								>
+									<span class="btn-innerText"
+										>Register Now</span
+									>
+								</button>
 							</div>
-							<div class="catvatar-option">
-								<input
-									type="radio"
-									name="Catvatar"
-									id="robot-kitty"
-									value="robot-kitty"
-								/>
-								<img
-									src="images/robot-kitty.png"
-									alt="An illustrated cat-like robot with mechanical features and a futuristic design"
-								/>
-								<label for="robot-kitty">RobotCat</label>
-							</div>
-							<button class="btn-register" onclick="playMusic()">
-								<span class="btn-innerText">Register Now</span>
-							</button>
 						</form>
+						<div class="popup">
+							<div id="register-img">
+								<img
+									src="./images/party-kitty.png"
+									alt="An illustrated cat celebrating successful registration, wearing a party hat, winking with one eye, happy expression, and holding a party horn in its mouth."
+								/>
+							</div>
+							<h2 id="popup-header">
+								Purrfect choice
+								<span id="register-name"></span>!
+							</h2>
+							<p class="successful-message">
+								You have been
+								<strong>successfully</strong> registered!
+							</p>
+							<button type="button" class="close-btn">
+								<span>Close</span>
+							</button>
+						</div>
+						<div class="overlay"></div>
 					</div>
 				</div>
 			</main>
 		</div>
-		<script src="index.js"></script>
+		<script src="registration.js"></script>
 	</body>
 </html>

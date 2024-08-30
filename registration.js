@@ -45,7 +45,7 @@ radioItems.forEach((item) => {
 
 //=======================================================//
 // Handles the functionality of the registration button.//
-//=======================================================//
+//======================================================//
 
 registerBtn.addEventListener("click", function (e) {
 	e.preventDefault();
