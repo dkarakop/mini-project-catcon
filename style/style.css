@@ -101,52 +101,53 @@ main h1 > img {
 }
 main .registration-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   justify-items: center;
   align-items: center;
-  gap: 2rem;
+  width: 100%;
 }
 main .registration-container .registration-img {
-  align-self: center;
-  justify-self: center;
-  width: 40%;
-  flex-grow: 1;
-  padding: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  width: 50%;
 }
-main .form-container {
+main .registration-container .registration-img img {
+  width: 80%;
+}
+main .registration-container .form-container {
   display: flex;
   flex-direction: column;
   background-color: lightgray;
   padding: 2rem;
-  flex-grow: 3;
+  width: 50%;
   /* Overlay styling */
   /* Close button styling */
 }
-main .form-container .h2-registration {
+main .registration-container .form-container .h2-registration {
   font-size: 2rem;
 }
-main .form-container form {
+main .registration-container .form-container form {
   display: flex;
   flex-direction: column;
 }
-main .form-container form .form-titles {
+main .registration-container .form-container form .form-titles {
   font-size: 2rem;
 }
-main .form-container form label {
+main .registration-container .form-container form label {
   font-size: 1.5rem;
 }
-main .form-container form label,
-main .form-container form input[type=text] {
+main .registration-container .form-container form label,
+main .registration-container .form-container form input[type=text] {
   padding: 0.4rem 0;
   font-size: 1.5rem;
   width: 100%;
   border-radius: 5px;
 }
-main .form-container form .radio-group {
+main .registration-container .form-container form .radio-group {
   display: flex;
   flex-direction: column;
 }
-main .form-container form .radio-group .radio-item {
+main .registration-container .form-container form .radio-group .radio-item {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -154,32 +155,32 @@ main .form-container form .radio-group .radio-item {
   margin-bottom: 1rem;
   outline: none;
 }
-main .form-container form .radio-group .radio-item label {
+main .registration-container .form-container form .radio-group .radio-item label {
   font-size: 1.7rem;
   cursor: pointer;
 }
-main .form-container form .radio-group .radio-item img {
+main .registration-container .form-container form .radio-group .radio-item img {
   width: 20%;
   cursor: pointer;
   outline: none;
 }
-main .form-container form .radio-group .radio-item:focus {
+main .registration-container .form-container form .radio-group .radio-item:focus {
   border: 3px dashed #0c3945;
   padding: 0 0.5rem;
 }
-main .form-container form #catName {
+main .registration-container .form-container form #catName {
   border: 1px solid lightgray;
   margin-bottom: 1rem;
   padding-left: 0.5rem;
 }
-main .form-container form #catName:focus {
+main .registration-container .form-container form #catName:focus {
   border: 3px dashed #0c3945;
   outline-style: none;
 }
-main .form-container form #catvatar {
+main .registration-container .form-container form #catvatar {
   font-weight: bold;
 }
-main .form-container form .btn-register {
+main .registration-container .form-container form .btn-register {
   font-family: "Teko", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
@@ -193,20 +194,20 @@ main .form-container form .btn-register {
   border: none;
   cursor: pointer;
 }
-main .form-container form .btn-register:focus {
+main .registration-container .form-container form .btn-register:focus {
   outline: none;
 }
-main .form-container form .btn-register .btn-innerText {
+main .registration-container .form-container form .btn-register .btn-innerText {
   display: inline-block;
   padding: 1px 10px;
   outline: none;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
-main .form-container form .btn-register:focus .btn-innerText {
+main .registration-container .form-container form .btn-register:focus .btn-innerText {
   border: 3px dashed #ffee00;
 }
-main .form-container .popup {
+main .registration-container .form-container .popup {
   display: none; /* Hidden by default */
   position: fixed;
   top: 50%;
@@ -220,34 +221,34 @@ main .form-container .popup {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
-main .form-container .popup.active {
+main .registration-container .form-container .popup.active {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main .form-container .popup.active > div {
+main .registration-container .form-container .popup.active > div {
   display: flex;
   justify-content: center;
 }
-main .form-container .popup.active > div > img {
+main .registration-container .form-container .popup.active > div > img {
   width: 100%;
 }
-main .form-container .popup.active > p {
+main .registration-container .form-container .popup.active > p {
   font-size: 1.5rem;
   color: green;
   text-align: center;
   margin-bottom: 1rem;
 }
-main .form-container #popup-header {
+main .registration-container .form-container #popup-header {
   font-weight: normal;
   font-size: 2rem;
   text-align: center;
 }
-main .form-container #popup-header span {
+main .registration-container .form-container #popup-header span {
   font-weight: bold;
 }
-main .form-container .overlay {
+main .registration-container .form-container .overlay {
   display: none;
   position: fixed;
   top: 0;
@@ -257,10 +258,10 @@ main .form-container .overlay {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
-main .form-container .overlay.active {
+main .registration-container .form-container .overlay.active {
   display: block;
 }
-main .form-container .popup .close-btn {
+main .registration-container .form-container .popup .close-btn {
   font-family: "Teko", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
@@ -273,14 +274,14 @@ main .form-container .popup .close-btn {
   text-decoration: none;
   cursor: pointer;
 }
-main .form-container .popup .close-btn span {
+main .registration-container .form-container .popup .close-btn span {
   display: inline-block;
   padding: 1px 10px;
   outline: none;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
-main .form-container .popup .close-btn:focus span {
+main .registration-container .form-container .popup .close-btn:focus span {
   border: 3px dashed #ffee00;
 }
 
@@ -295,6 +296,7 @@ main .form-container .popup .close-btn:focus span {
   body main .registration-container .form-container {
     display: flex;
     flex-direction: column;
+    width: 80%;
   }
   body main .registration-container .form-container .h2-registration {
     font-size: 2rem;
@@ -303,7 +305,6 @@ main .form-container .popup .close-btn:focus span {
   body main .registration-container .form-container form {
     display: flex;
     flex-direction: column;
-    width: 70vw;
   }
 }
 @media (max-width: 600px) {
