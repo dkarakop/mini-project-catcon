@@ -20,6 +20,15 @@ body {
 	font-weight: weight;
 	font-style: normal;
 	margin: 2rem 10rem;
+	h1 {
+		font-size: 4rem;
+		text-align: center;
+	}
+	h2 {
+		font-size: 3rem;
+		text-align: center;
+		color: colors.$color7;
+	}
 	.header-main-container {
 		display: flex;
 		flex-direction: column;
@@ -38,10 +47,7 @@ body {
 				display: flex;
 				align-items: baseline;
 				justify-content: center;
-				h1 {
-					font-size: 4rem;
-					text-align: center;
-				}
+
 				.main-title-img {
 					width: 15%;
 					img {
@@ -87,7 +93,28 @@ body {
 			}
 		}
 	}
+	footer {
+		margin: 1rem 0;
+
+		font-size: 1.2rem;
+		color: colors.$color4;
+		text-align: right;
+		a {
+			text-decoration: underline;
+			color: colors.$color4;
+			padding: 0.2rem;
+			&:hover {
+				color: colors.$color5;
+			}
+			&:focus {
+				outline: none;
+				text-decoration: none;
+				border: 3px dashed colors.$color5;
+			}
+		}
+	}
 }
+
 @media (max-width: 1100px) {
 	body {
 		margin: 2rem 6rem;

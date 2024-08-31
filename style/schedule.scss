@@ -1,77 +1,90 @@
 @use "./colors.scss" as colors;
 
 main {
-	h1 {
-		font-size: 4rem;
-	}
-	h1 > img {
-		width: 15%;
-	}
-	.schedule-img {
-		width: 20%;
-	}
-	.schedule-h1 {
-		font-size: 3rem;
-		margin: 0;
-	}
-	.table-container {
-		table {
-			width: 100%;
-			font-size: 1.5rem;
-			//how to delete border
-			border-collapse: collapse;
-		}
-		thead {
-			background-color: colors.$color2;
-			th {
-				padding-right: 1.5rem;
-			}
-		}
-		tbody {
-			th {
-				padding-right: 1.5rem;
-			}
-			td {
-				padding-right: 4rem;
-			}
-		}
-		.scheduleHead {
-			text-align: start;
-		}
-		.noSpeaker {
-			text-align: center;
-		}
-		caption {
-			font-size: 1.5rem;
-			caption-side: bottom;
-			margin-top: 1rem;
-			font-weight: bold;
-			background-color: colors.$color2;
-		}
-	}
-	.schedule-register {
+	.schedule-container {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
-		.schedule-message {
+		justify-content: center;
+		align-items: center;
+
+		.schedule-img-container {
 			text-align: center;
+			padding: 0.5rem;
+			margin-bottom: 1rem;
+			img {
+				width: 40%;
+			}
 		}
-		.btn-register {
-			text-decoration: none;
-			background-color: colors.$mainColor;
-			color: colors.$color4;
-			font-size: 1.5rem;
-			padding: 0.5rem 1rem;
-			border: none;
-			border-radius: 5px;
-			justify-self: center;
-			align-self: center;
+		.table-container {
+			table {
+				width: 100%;
+				font-size: 1.5rem;
+				//how to delete border
+				border-collapse: collapse;
+			}
+			thead {
+				background-color: colors.$color2;
+				th {
+					padding-right: 1.5rem;
+				}
+			}
+			tbody {
+				th {
+					padding-right: 1.5rem;
+				}
+				td {
+					padding-right: 4rem;
+				}
+			}
+			.scheduleHead {
+				text-align: start;
+			}
+			.noSpeaker {
+				text-align: center;
+			}
+			caption {
+				font-size: 1.5rem;
+				caption-side: bottom;
+				margin-top: 1rem;
+				font-weight: bold;
+				background-color: colors.$color2;
+			}
 		}
-		img {
-			justify-self: center;
-			align-self: center;
-			width: 20%;
-			padding: 1rem;
+		.schedule-register {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.schedule-message {
+				text-align: center;
+			}
+			img {
+				justify-self: center;
+				align-self: center;
+				width: 20%;
+				padding: 1rem;
+			}
+			.btn-register {
+				text-decoration: none;
+				background-color: colors.$mainColor;
+				color: colors.$color4;
+				font-size: 2rem;
+				padding: 0.5rem 1rem;
+				border-radius: 5px;
+				&:focus {
+					outline: none;
+				}
+				.btn-innerText {
+					display: inline-block;
+					padding: 1px 10px;
+					outline: none;
+					border: 2px solid transparent;
+					transition: border-color 0.3s ease;
+				}
+			}
+			.btn-register:focus .btn-innerText {
+				border: 3px dashed colors.$color5;
+			}
 		}
 	}
 }
