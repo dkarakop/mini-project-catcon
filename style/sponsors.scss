@@ -1,29 +1,26 @@
 @use "./colors.scss" as colors;
 
 main {
-	h1 > img {
-		width: 15%;
+	.sponsors-img {
+		width: 20%;
+		margin-bottom: 2rem;
 	}
 	.sponsors-container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 0.2fr 1fr 0.7fr 0.7fr 0.5fr;
 		place-items: center;
-		.sponsors-header {
-			grid-column: 1/-1;
-			place-self: center;
-		}
-		.sponsors-img {
-			grid-column: 1/-1;
-			width: 30%;
-			margin: 2rem 0;
-		}
+		gap: 3rem;
 		.sponsors {
 			align-self: start;
 			justify-self: center;
-			padding: 0 1rem;
 			> h2 {
 				text-align: center;
+				line-height: 3rem;
+			}
+			> h3 {
+				text-align: center;
+				font-size: 1.5rem;
+				margin: 0.5rem 0;
 			}
 			> ul {
 				padding: 0;
@@ -52,7 +49,12 @@ main {
 	body {
 		main {
 			gap: 0;
+			.sponsors-img {
+				width: 40%;
+				margin-bottom: 2rem;
+			}
 			.sponsors-container {
+				width: 100%;
 				display: flex;
 				flex-direction: column;
 				gap: 2rem;
@@ -62,6 +64,7 @@ main {
 				}
 				.sponsors {
 					align-self: center;
+					padding-top: 2rem;
 				}
 			}
 		}

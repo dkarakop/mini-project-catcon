@@ -474,31 +474,28 @@ main .schedule-container .schedule-register .btn-register:focus .btn-innerText {
     width: 60%;
   }
 }
-main h1 > img {
-  width: 15%;
+main .sponsors-img {
+  width: 20%;
+  margin-bottom: 2rem;
 }
 main .sponsors-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 0.2fr 1fr 0.7fr 0.7fr 0.5fr;
   place-items: center;
-}
-main .sponsors-container .sponsors-header {
-  grid-column: 1/-1;
-  place-self: center;
-}
-main .sponsors-container .sponsors-img {
-  grid-column: 1/-1;
-  width: 30%;
-  margin: 2rem 0;
+  gap: 3rem;
 }
 main .sponsors-container .sponsors {
   align-self: start;
   justify-self: center;
-  padding: 0 1rem;
 }
 main .sponsors-container .sponsors > h2 {
   text-align: center;
+  line-height: 3rem;
+}
+main .sponsors-container .sponsors > h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
 }
 main .sponsors-container .sponsors > ul {
   padding: 0;
@@ -524,7 +521,12 @@ main .sponsors-container #btn-register {
   body main {
     gap: 0;
   }
+  body main .sponsors-img {
+    width: 40%;
+    margin-bottom: 2rem;
+  }
   body main .sponsors-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -535,6 +537,7 @@ main .sponsors-container #btn-register {
   }
   body main .sponsors-container .sponsors {
     align-self: center;
+    padding-top: 2rem;
   }
 }
 main h1 > img {
