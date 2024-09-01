@@ -540,21 +540,25 @@ main .sponsors-container #btn-register {
     padding-top: 2rem;
   }
 }
-main h1 > img {
-  width: 15%;
-}
 main .previousCatCont-container {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  gap: 2rem;
   width: 100%;
+}
+main .previousCatCont-container > h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #003c4c;
 }
 main .previousCatCont-container .previousCon-star-img {
   width: 20%;
+  padding: 1rem;
 }
 main .previousCatCont-container .previousCatCon-moments-container {
+  margin: 2rem 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(2fr, 7);
@@ -564,14 +568,21 @@ main .previousCatCont-container .previousCatCon-moments-container {
   align-items: center;
   row-gap: 1rem;
   border-radius: 5px;
-  border: 2px solid hsl(0, 0%, 83%);
+  border: 3px solid #003c4c;
+  background-color: hsl(0, 0%, 83%);
 }
 main .previousCatCont-container .previousCatCon-moments-container .previousCatCont-h3 {
-  background-color: hsl(0, 0%, 83%);
-  font-size: 1.2rem;
+  background-color: #003c4c;
+  color: #eee;
+  font-size: 2rem;
+  font-weight: 600;
   width: 100%;
   text-align: center;
   padding: 1rem 0;
+}
+main .previousCatCont-container .previousCatCon-moments-container .previousCatCont-h3 > span {
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 main .previousCatCont-container .previousCatCon-moments-container iframe {
   width: 100%;
@@ -585,26 +596,43 @@ main .previousCatCont-container .previousCatCon-moments-container #gif-7 {
 main .previousCatCont-container .previousCatCon-moments-container #gif-7 {
   padding-bottom: 1rem;
 }
+main .previousCon-message {
+  text-align: center;
+}
 main .previousCon-message .previousCon-message-p1 {
   font-size: 2rem;
-  text-align: center;
 }
 main .previousCon-message .previousCon-message-p2 {
   font-size: 1.5rem;
-  text-align: center;
+  font-weight: 500;
+  color: #003c4c;
 }
-main .previousCon-writting-img {
-  width: 15%;
+main .previousCon-message .previousCon-writting-img {
+  padding: 1rem;
+  width: 20%;
 }
-main #btn-register {
-  align-self: center;
+main .btn-register {
+  margin-top: 1.5rem;
   text-decoration: none;
   background-color: #0c3945;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 0.5rem 1rem;
-  border: none;
   border-radius: 5px;
+}
+main .btn-register:focus {
+  outline: none;
+}
+main .btn-register .btn-innerText {
+  display: inline -block;
+  padding: 1px 10px;
+  outline: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+main .btn-register:focus .btn-innerText {
+  border-radius: 5px;
+  border: 3px dashed #ffee00;
 }
 
 @media (max-width: 768px) {
