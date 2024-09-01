@@ -18,6 +18,7 @@ header .header-container .header-logo > img {
   padding: 2px;
 }
 header .header-container .header-logo:focus {
+  border-radius: 5px;
   border: 3px dashed #ffee00;
 }
 header .header-container nav .navigation-menu {
@@ -45,6 +46,7 @@ header .header-container nav .navigation-menu li a:hover {
   color: #ffee00;
 }
 header .header-container nav .navigation-menu li a:focus {
+  border-radius: 5px;
   border: 3px dashed #ffee00;
 }
 
@@ -117,7 +119,7 @@ main .registration-container .registration-img img {
 main .registration-container .form-container {
   display: flex;
   flex-direction: column;
-  background-color: lightgray;
+  background-color: hsl(0, 0%, 83%);
   padding: 2rem;
   width: 50%;
   /* Overlay styling */
@@ -166,15 +168,18 @@ main .registration-container .form-container form .radio-group .radio-item img {
   outline: none;
 }
 main .registration-container .form-container form .radio-group .radio-item:focus {
+  border-radius: 5px;
   border: 3px dashed #0c3945;
   padding: 0 0.5rem;
 }
 main .registration-container .form-container form #catName {
-  border: 1px solid lightgray;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 83%);
   margin-bottom: 1rem;
   padding-left: 0.5rem;
 }
 main .registration-container .form-container form #catName:focus {
+  border-radius: 5px;
   border: 3px dashed #0c3945;
   outline-style: none;
 }
@@ -203,10 +208,12 @@ main .registration-container .form-container form .btn-register .btn-innerText {
   display: inline-block;
   padding: 1px 10px;
   outline: none;
+  border-radius: 5px;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
 main .registration-container .form-container form .btn-register:focus .btn-innerText {
+  border-radius: 5px;
   border: 3px dashed #ffee00;
 }
 main .registration-container .form-container .popup {
@@ -219,7 +226,7 @@ main .registration-container .form-container .popup {
   padding: 20px;
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
@@ -273,6 +280,7 @@ main .registration-container .form-container .popup .close-btn {
   font-size: 1.5rem;
   padding: 0.2rem 1rem;
   border-radius: 5px;
+  outline: none;
   text-decoration: none;
   cursor: pointer;
 }
@@ -284,6 +292,8 @@ main .registration-container .form-container .popup .close-btn span {
   transition: border-color 0.3s ease;
 }
 main .registration-container .form-container .popup .close-btn:focus span {
+  outline: none;
+  border-radius: 5px;
   border: 3px dashed #ffee00;
 }
 
@@ -348,7 +358,7 @@ main .schedule-container .table-container table {
   border-collapse: collapse;
 }
 main .schedule-container .table-container thead {
-  background-color: lightgray;
+  background-color: hsl(0, 0%, 83%);
 }
 main .schedule-container .table-container thead th {
   padding-right: 1.5rem;
@@ -366,11 +376,11 @@ main .schedule-container .table-container .noSpeaker {
   text-align: center;
 }
 main .schedule-container .table-container caption {
-  font-size: 1.5rem;
-  caption-side: bottom;
+  font-size: 2rem;
   margin-top: 1rem;
-  font-weight: bold;
-  background-color: lightgray;
+  padding: 0.5rem;
+  background-color: #003c4c;
+  color: #eee;
 }
 main .schedule-container .schedule-register {
   display: flex;
@@ -504,10 +514,10 @@ main .previousCatCont-container .previousCatCon-moments-container {
   justify-items: center;
   align-items: center;
   row-gap: 1rem;
-  border: 2px solid lightgray;
+  border: 2px solid hsl(0, 0%, 83%);
 }
 main .previousCatCont-container .previousCatCon-moments-container .previousCatCont-h3 {
-  background-color: lightgray;
+  background-color: hsl(0, 0%, 83%);
   font-size: 1.2rem;
   width: 100%;
   text-align: center;
@@ -598,6 +608,7 @@ body .header-main-container main {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  border-radius: 5px;
 }
 body .header-main-container main .main-title-container {
   display: flex;
@@ -636,13 +647,14 @@ body .header-main-container main .section-welcome .btn-register:focus {
   outline: none;
 }
 body .header-main-container main .section-welcome .btn-register .btn-innerText {
-  display: inline-block;
+  display: inline -block;
   padding: 1px 10px;
   outline: none;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
 body .header-main-container main .section-welcome .btn-register:focus .btn-innerText {
+  border-radius: 5px;
   border: 3px dashed #ffee00;
 }
 body footer {
@@ -662,6 +674,7 @@ body footer a:hover {
 body footer a:focus {
   outline: none;
   text-decoration: none;
+  border-radius: 5px;
   border: 3px dashed #ffee00;
 }
 

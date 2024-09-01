@@ -16,6 +16,7 @@ main {
 			}
 		}
 		.table-container {
+			width: 100%;
 			table {
 				width: 100%;
 				font-size: 1.5rem;
@@ -43,11 +44,11 @@ main {
 				text-align: center;
 			}
 			caption {
-				font-size: 1.5rem;
-				caption-side: bottom;
+				font-size: 2rem;
 				margin-top: 1rem;
-				font-weight: bold;
-				background-color: colors.$color2;
+				padding: 0.5rem;
+				background-color: colors.$color7;
+				color: colors.$color3;
 			}
 		}
 		.schedule-register {
@@ -78,11 +79,13 @@ main {
 					display: inline-block;
 					padding: 1px 10px;
 					outline: none;
+					border-radius: 5px;
 					border: 2px solid transparent;
 					transition: border-color 0.3s ease;
 				}
 			}
 			.btn-register:focus .btn-innerText {
+				border-radius: 5px;
 				border: 3px dashed colors.$color5;
 			}
 		}

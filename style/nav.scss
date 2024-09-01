@@ -19,6 +19,7 @@ header {
 			padding: 2px;
 		}
 		.header-logo:focus {
+			border-radius: 5px;
 			border: 3px dashed colors.$color5;
 		}
 		nav {
@@ -48,6 +49,7 @@ header {
 						}
 					}
 					a:focus {
+						border-radius: 5px;
 						border: 3px dashed colors.$color5;
 					}
 				}
