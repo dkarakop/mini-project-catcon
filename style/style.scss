@@ -126,19 +126,7 @@ body {
 		margin: 2rem 4rem;
 	}
 }
-@media (max-width: 600px) {
-	body {
-		.header-main-container {
-			main {
-				.main-title-container {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-				}
-			}
-		}
-	}
-}
+
 @media (max-width: 768px) {
 	body {
 		margin: 0.2rem 0;
@@ -156,6 +144,23 @@ body {
 					.btn-register {
 						margin-top: 1rem;
 					}
+				}
+			}
+		}
+		footer {
+			margin-right: 1rem;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		.header-main-container {
+			main {
+				.main-title-container {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
 				}
 			}
 		}
