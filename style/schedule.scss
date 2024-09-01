@@ -17,24 +17,56 @@ main {
 		}
 		.table-container {
 			width: 100%;
+			margin-top: 1rem;
+			border-radius: 5px;
+			border: 3px solid colors.$color7;
+
 			table {
 				width: 100%;
 				font-size: 1.5rem;
 				//how to delete border
 				border-collapse: collapse;
 			}
+			caption {
+				font-size: 2rem;
+				padding: 0.5rem;
+				background-color: colors.$color7;
+				color: colors.$color3;
+			}
 			thead {
 				background-color: colors.$color2;
-				th {
-					padding-right: 1.5rem;
+
+				tr {
+					font-size: 1.7rem;
+					th {
+						padding-right: 1.5rem;
+						img {
+							width: 20%;
+							padding-top: 0.5rem;
+						}
+					}
 				}
 			}
 			tbody {
+				tr:nth-child(odd) {
+					background-color: colors.$color4;
+				}
+				tr:nth-child(even) {
+					background-color: colors.$color2;
+				}
 				th {
 					padding-right: 1.5rem;
+					padding-top: 1.5rem;
+					padding-bottom: 1.3rem;
 				}
 				td {
-					padding-right: 4rem;
+					padding-top: 1rem;
+					padding-right: 2rem;
+					padding-bottom: 1.3rem;
+
+					img {
+						width: 2rem;
+					}
 				}
 			}
 			.scheduleHead {
@@ -43,15 +75,9 @@ main {
 			.noSpeaker {
 				text-align: center;
 			}
-			caption {
-				font-size: 2rem;
-				margin-top: 1rem;
-				padding: 0.5rem;
-				background-color: colors.$color7;
-				color: colors.$color3;
-			}
 		}
 		.schedule-register {
+			margin-top: 2rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -60,10 +86,14 @@ main {
 				text-align: center;
 			}
 			img {
+				border-radius: 5px;
 				justify-self: center;
 				align-self: center;
 				width: 20%;
 				padding: 1rem;
+			}
+			h3 {
+				font-size: 1.5rem;
 			}
 			.btn-register {
 				text-decoration: none;
@@ -94,12 +124,63 @@ main {
 
 @media (max-width: 768px) {
 	main {
-		.schedule-img {
-			width: 30%;
-			padding: 1.5rem 0;
+		.schedule-container {
+			.table-container {
+				thead {
+					tr {
+						th {
+							img {
+								width: 30%;
+							}
+						}
+					}
+				}
+			}
+			.schedule-img {
+				width: 30%;
+				padding: 1.5rem 0;
+			}
+			.schedule-register {
+				margin-top: 2rem;
+				img {
+					width: 40%;
+				}
+			}
 		}
-		.schedule-register {
-			margin-top: 2rem;
+	}
+}
+
+@media (max-width: 500px) {
+	main {
+		.schedule-container {
+			.table-container {
+				thead {
+					tr {
+						th {
+							img {
+								width: 50%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 400px) {
+	main {
+		.schedule-container {
+			.table-container {
+				thead {
+					tr {
+						th {
+							img {
+								width: 60%;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

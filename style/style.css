@@ -122,6 +122,7 @@ main .registration-container .form-container {
   background-color: hsl(0, 0%, 83%);
   padding: 2rem;
   width: 50%;
+  border-radius: 5px;
   /* Overlay styling */
   /* Close button styling */
 }
@@ -351,23 +352,52 @@ main .schedule-container .schedule-img-container img {
 }
 main .schedule-container .table-container {
   width: 100%;
+  margin-top: 1rem;
+  border-radius: 5px;
+  border: 3px solid #003c4c;
 }
 main .schedule-container .table-container table {
   width: 100%;
   font-size: 1.5rem;
   border-collapse: collapse;
 }
+main .schedule-container .table-container caption {
+  font-size: 2rem;
+  padding: 0.5rem;
+  background-color: #003c4c;
+  color: #eee;
+}
 main .schedule-container .table-container thead {
   background-color: hsl(0, 0%, 83%);
 }
-main .schedule-container .table-container thead th {
+main .schedule-container .table-container thead tr {
+  font-size: 1.7rem;
+}
+main .schedule-container .table-container thead tr th {
   padding-right: 1.5rem;
+}
+main .schedule-container .table-container thead tr th img {
+  width: 20%;
+  padding-top: 0.5rem;
+}
+main .schedule-container .table-container tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+main .schedule-container .table-container tbody tr:nth-child(even) {
+  background-color: hsl(0, 0%, 83%);
 }
 main .schedule-container .table-container tbody th {
   padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.3rem;
 }
 main .schedule-container .table-container tbody td {
-  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.3rem;
+}
+main .schedule-container .table-container tbody td img {
+  width: 2rem;
 }
 main .schedule-container .table-container .scheduleHead {
   text-align: start;
@@ -375,14 +405,8 @@ main .schedule-container .table-container .scheduleHead {
 main .schedule-container .table-container .noSpeaker {
   text-align: center;
 }
-main .schedule-container .table-container caption {
-  font-size: 2rem;
-  margin-top: 1rem;
-  padding: 0.5rem;
-  background-color: #003c4c;
-  color: #eee;
-}
 main .schedule-container .schedule-register {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -392,10 +416,14 @@ main .schedule-container .schedule-register .schedule-message {
   text-align: center;
 }
 main .schedule-container .schedule-register img {
+  border-radius: 5px;
   justify-self: center;
   align-self: center;
   width: 20%;
   padding: 1rem;
+}
+main .schedule-container .schedule-register h3 {
+  font-size: 1.5rem;
 }
 main .schedule-container .schedule-register .btn-register {
   text-decoration: none;
@@ -412,20 +440,38 @@ main .schedule-container .schedule-register .btn-register .btn-innerText {
   display: inline-block;
   padding: 1px 10px;
   outline: none;
+  border-radius: 5px;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
 main .schedule-container .schedule-register .btn-register:focus .btn-innerText {
+  border-radius: 5px;
   border: 3px dashed #ffee00;
 }
 
 @media (max-width: 768px) {
-  main .schedule-img {
+  main .schedule-container .table-container thead tr th img {
+    width: 30%;
+  }
+  main .schedule-container .schedule-img {
     width: 30%;
     padding: 1.5rem 0;
   }
-  main .schedule-register {
+  main .schedule-container .schedule-register {
     margin-top: 2rem;
+  }
+  main .schedule-container .schedule-register img {
+    width: 40%;
+  }
+}
+@media (max-width: 500px) {
+  main .schedule-container .table-container thead tr th img {
+    width: 50%;
+  }
+}
+@media (max-width: 400px) {
+  main .schedule-container .table-container thead tr th img {
+    width: 60%;
   }
 }
 main h1 > img {
@@ -514,6 +560,7 @@ main .previousCatCont-container .previousCatCon-moments-container {
   justify-items: center;
   align-items: center;
   row-gap: 1rem;
+  border-radius: 5px;
   border: 2px solid hsl(0, 0%, 83%);
 }
 main .previousCatCont-container .previousCatCon-moments-container .previousCatCont-h3 {
