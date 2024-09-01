@@ -1,20 +1,24 @@
 @use "./colors.scss" as colors;
 
 main {
-	h1 > img {
-		width: 15%;
-	}
 	.previousCatCont-container {
 		display: flex;
 		flex-direction: column;
 		justify-items: center;
 		align-items: center;
-		gap: 2rem;
 		width: 100%;
+		> h3 {
+			font-size: 1.5rem;
+			text-align: center;
+			font-weight: 600;
+			color: colors.$color7;
+		}
 		.previousCon-star-img {
 			width: 20%;
+			padding: 1rem;
 		}
 		.previousCatCon-moments-container {
+			margin: 2rem 0;
 			display: grid;
 			grid-template-columns: 1fr 1fr 1fr;
 			grid-template-rows: repeat(2fr, 7);
@@ -24,14 +28,21 @@ main {
 			align-items: center;
 			row-gap: 1rem;
 			border-radius: 5px;
-			border: 2px solid colors.$color2;
-
+			border: 3px solid colors.$color7;
+			background-color: colors.$color2;
 			.previousCatCont-h3 {
-				background-color: colors.$color2;
-				font-size: 1.2rem;
+				background-color: colors.$color7;
+				color: colors.$color3;
+				font-size: 2rem;
+				font-weight: 600;
+				line-height: 2rem;
 				width: 100%;
 				text-align: center;
 				padding: 1rem 0;
+				> span {
+					font-weight: normal;
+					letter-spacing: 1px;
+				}
 			}
 			iframe {
 				width: 100%;
@@ -49,45 +60,103 @@ main {
 		}
 	}
 	.previousCon-message {
+		text-align: center;
 		.previousCon-message-p1 {
 			font-size: 2rem;
-			text-align: center;
 		}
 		.previousCon-message-p2 {
 			font-size: 1.5rem;
-			text-align: center;
+			font-weight: 500;
+			color: colors.$color7;
+		}
+		.previousCon-writting-img {
+			padding: 1rem;
+			width: 20%;
 		}
 	}
-	.previousCon-writting-img {
-		width: 15%;
-	}
-	#btn-register {
-		align-self: center;
+	.btn-register {
+		margin-top: 1.5rem;
 		text-decoration: none;
 		background-color: colors.$mainColor;
 		color: colors.$color4;
-		font-size: 1.5rem;
+		font-size: 2rem;
 		padding: 0.5rem 1rem;
-		border: none;
 		border-radius: 5px;
+		&:focus {
+			outline: none;
+		}
+		.btn-innerText {
+			display: inline -block;
+			padding: 1px 10px;
+			outline: none;
+			border: 2px solid transparent;
+			transition: border-color 0.3s ease;
+		}
+	}
+	.btn-register:focus .btn-innerText {
+		border-radius: 5px;
+		border: 3px dashed colors.$color5;
 	}
 }
 
 @media (max-width: 768px) {
 	main {
 		.previousCatCont-container {
-			gap: 1rem;
-
 			.previousCon-star-img {
 				width: 40%;
 			}
-		}
-		.previousCatCon-moments-container {
-			row-gap: 0;
-		}
+			.previousCatCon-moments-container {
+				display: flex;
+				flex-direction: column;
+				width: 80%;
 
-		.previousCon-writting-img {
-			width: 30%;
+				> iframe {
+					height: 100%;
+				}
+			}
+			.previousCon-writting-img {
+				width: 30%;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	main {
+		.previousCatCont-container {
+			.previousCon-star-img {
+				width: 40%;
+			}
+			.previousCatCon-moments-container {
+				display: flex;
+				flex-direction: column;
+				width: 90%;
+
+				> iframe {
+					width: 100%;
+				}
+			}
+			.previousCon-writting-img {
+				width: 40%;
+			}
+		}
+	}
+}
+@media (max-width: 400px) {
+	main {
+		.previousCatCont-container {
+			.previousCon-star-img {
+				width: 40%;
+			}
+			.previousCatCon-moments-container {
+				display: flex;
+				flex-direction: column;
+				width: 95%;
+
+				> iframe {
+					width: 100%;
+				}
+			}
 		}
 	}
 }

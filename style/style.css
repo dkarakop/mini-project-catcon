@@ -504,17 +504,27 @@ main .sponsors-container .sponsors > ul {
 main .sponsors-container .sponsors > ul > .company {
   font-size: 1.5rem;
 }
-main .sponsors-container #btn-register {
-  grid-column: 1/-1;
-  justify-self: center;
-  align-self: center;
+main .sponsors-container .btn-register {
   text-decoration: none;
   background-color: #0c3945;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 0.5rem 1rem;
-  border: none;
   border-radius: 5px;
+}
+main .sponsors-container .btn-register:focus {
+  outline: none;
+}
+main .sponsors-container .btn-register .btn-innerText {
+  display: inline;
+  padding: 1px 10px;
+  outline: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+main .sponsors-container .btn-register:focus .btn-innerText {
+  border-radius: 5px;
+  border: 3px dashed #ffee00;
 }
 
 @media (max-width: 768px) {
@@ -576,6 +586,7 @@ main .previousCatCont-container .previousCatCon-moments-container .previousCatCo
   color: #eee;
   font-size: 2rem;
   font-weight: 600;
+  line-height: 2rem;
   width: 100%;
   text-align: center;
   padding: 1rem 0;
@@ -636,17 +647,48 @@ main .btn-register:focus .btn-innerText {
 }
 
 @media (max-width: 768px) {
-  main .previousCatCont-container {
-    gap: 1rem;
-  }
   main .previousCatCont-container .previousCon-star-img {
     width: 40%;
   }
-  main .previousCatCon-moments-container {
-    row-gap: 0;
+  main .previousCatCont-container .previousCatCon-moments-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
   }
-  main .previousCon-writting-img {
+  main .previousCatCont-container .previousCatCon-moments-container > iframe {
+    height: 100%;
+  }
+  main .previousCatCont-container .previousCon-writting-img {
     width: 30%;
+  }
+}
+@media (max-width: 500px) {
+  main .previousCatCont-container .previousCon-star-img {
+    width: 40%;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container > iframe {
+    width: 100%;
+  }
+  main .previousCatCont-container .previousCon-writting-img {
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  main .previousCatCont-container .previousCon-star-img {
+    width: 40%;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container > iframe {
+    width: 100%;
   }
 }
 * {
