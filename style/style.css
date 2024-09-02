@@ -759,6 +759,44 @@ main .btn-register:focus .btn-innerText {
     width: 15rem;
   }
 }
+@media (max-width: 300px) {
+  main .previousCatCont-container .previousCatCon-moments-container {
+    width: 90%;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images > img {
+    width: 9rem;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images #gif-6,
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images #gif-7 {
+    height: 9rem;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images #gif-7 {
+    width: 10rem;
+  }
+}
+@media (max-width: 250px) {
+  main .previousCatCont-container .previousCatCon-moments-container {
+    width: 90%;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images > img {
+    width: 8rem;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images #gif-6,
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images #gif-7 {
+    height: 8rem;
+  }
+  main .previousCatCont-container .previousCatCon-moments-container .previousCatcon-images #gif-7 {
+    width: 9rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;

@@ -242,3 +242,53 @@ main {
 		}
 	}
 }
+
+@media (max-width: 300px) {
+	main {
+		.previousCatCont-container {
+			.previousCatCon-moments-container {
+				width: 90%;
+				.previousCatcon-images {
+					flex-direction: column;
+
+					gap: 1rem;
+					> img {
+						width: 9rem;
+					}
+					#gif-6,
+					#gif-7 {
+						height: 9rem;
+					}
+					#gif-7 {
+						width: 10rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 250px) {
+	main {
+		.previousCatCont-container {
+			.previousCatCon-moments-container {
+				width: 90%;
+				.previousCatcon-images {
+					flex-direction: column;
+
+					gap: 1rem;
+					> img {
+						width: 8rem;
+					}
+					#gif-6,
+					#gif-7 {
+						height: 8rem;
+					}
+					#gif-7 {
+						width: 9rem;
+					}
+				}
+			}
+		}
+	}
+}
