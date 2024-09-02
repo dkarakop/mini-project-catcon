@@ -67,18 +67,28 @@ header {
 		.burger-nav-dropdown {
 			position: relative;
 			display: inline-block;
-			width: 50px;
+			width: 60px;
 			padding: 0.5rem;
-			.burger-dropbtn {
-				cursor: pointer;
+			margin-left: 0.5rem;
+			background: none;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			> img {
 				width: 100%;
 			}
 			.burger-dropdown-content {
+				font-family: "Teko", sans-serif;
+				font-optical-sizing: auto;
+				font-weight: weight;
+				font-style: normal;
+				font-size: 2rem;
+				text-align: left;
 				display: none;
 				font-size: 1.5rem;
 				position: absolute;
 				background-color: colors.$color3;
-				min-width: 160px;
+				min-width: 180px;
 				box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 				z-index: 1;
 			}
@@ -95,8 +105,16 @@ header {
 				background-color: colors.$color5;
 			}
 		}
-		.burger-nav-dropdown:hover .burger-dropdown-content {
+		.burger-nav-dropdown.active .burger-dropdown-content {
 			display: block;
+		}
+		.burger-nav-dropdown.active img {
+			filter: brightness(0.5); /* Darken the icon */
+		}
+
+		.burger-nav-dropdown:focus {
+			border-radius: 5px;
+			border: 3px dashed colors.$color5;
 		}
 		.header-container {
 			justify-content: flex-start;
